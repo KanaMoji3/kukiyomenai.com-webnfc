@@ -9,8 +9,7 @@ writeButton.addEventListener('click', async () => {
         await ndef.write({
             records: [{ recordType: "url", data: url }]
         });
-        // URLの形式はhttps://から書き始める必要がある。　例：https://www.google.com
-        cardStatus.textContent = 'カードの状態：未検出';
+        cardStatus.textContent = 'カードの状態：書き込み成功';
     } catch (e) {
         cardStatus.textContent = 'カードの状態：エラー';
     }
