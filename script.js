@@ -27,6 +27,7 @@ readButton.addEventListener('click', async () => {
                 const records = event.message.records;
                 if (records.length > 0 && records[0].recordType === 'url') {
                     const url = new TextDecoder().decode(records[0].data);
+                    cardCheck.textContent = 'カードの状態：読み取り完了';
                     cardStatus.textContent = `カード内の情報：${url}`;
                 }
             } catch (error) {
